@@ -1,5 +1,13 @@
 from sqlalchemy import MetaData, Table, Column, SERIAL, Text,Datetime,ENUM
 
+from enum import Enum
+
+class status (enum.Enum):
+        PENDING = "PENDING"
+        IN_PROGRESS = "IN_PROGRESS"
+        COMPLETED = "COMPLETED"
+        DELETED = "DELETED"
+
 users_table = Table(
         "users",MetaData,
         Column("id", SERIAL, primary_key=True),
@@ -19,7 +27,13 @@ subtodo = Table(
         Column("description", Text, unique=True),
         Column("duedate" ,Datetime),
         Column("created_at",Datetime),
-        Column("updated_at",Datetime)
+        Column("updated_at",Datetime),
+        Column(
+            ENUM(status),
+            default=Status.PENDING,
+            nullable=False
+        ),
+
     )
 todo = Table(
         "todo",MetaData,
@@ -29,5 +43,11 @@ todo = Table(
         Column("description", Text, unique=True),
         Column("duedate" ,Datetime),
         Column("created_at",Datetime),
-        Column("updated_at",Datetime)
+        Column("updated_at",Datetime),
+        Column(
+            ENUM(status),
+            default=Status.PENDING,
+            nullable=False
+        ),
     )
+    
