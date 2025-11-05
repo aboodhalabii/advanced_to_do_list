@@ -29,6 +29,7 @@ subtodo = Table(
         Column("created_at",Datetime),
         Column("updated_at",Datetime),
         Column(
+            "status",
             ENUM(status),
             default=Status.PENDING,
             nullable=False
@@ -45,6 +46,7 @@ todo = Table(
         Column("created_at",Datetime),
         Column("updated_at",Datetime),
         Column(
+            "status";
             ENUM(status),
             default=Status.PENDING,
             nullable=False
