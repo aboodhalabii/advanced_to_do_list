@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>todo list</title>
+    <link rel="stylesheet" href="../static/css/sub-task.css">
+</head>
+<body>
+<div class="container">
+    <div class="info">
+    <h2>task 1</h2>
+    <p><img src="../static/images/bin.png" height="30" alt="delete" onclick="delete_todo">
+    <img src="../static/images/pencil.png" height="30" alt="edit" onclick="update_todo">
+</p>
+</div>
+</div>
+               <script>
+                function delete_todo(todo_id) {
+                    window.location="delete_todo/"+ todo_id
+                };
+                function update_todo(todo_id) {
+                    window.location="update_todo/"+ todo_id
+                }
+                </script>
+
+
+</body>
+</html>

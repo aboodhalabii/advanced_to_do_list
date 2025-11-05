@@ -1,18 +1,55 @@
 <!DOCTYPE html>
 <html>
-
-
 <head>
-<link rel="stylesheet" href="style.css">
- <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
     <title>todo list</title>
+    <link rel="stylesheet" href="../static/css/style.css">
 </head>
 <body>
-    <input type="text" name="username" placeholder="add task">
-    <input type="button" name="add" value="add">
-    
+<div class="container">
+ <div class="todo-app">
+     <h2>todo list</h2>
+     <div class="drop-list">
+        <label for="status">task-status</label>
+        <select class="status" name="list">
+            <option value="completed">completed</option>
+            <option value="in progress">in-progress</option>
+            <option value="pending">pending</option>
+            <option value="cancelled">cancelled</option>
+        </select>
+     </div>
+     <div class="row">
+            <input type="text" id="input-task" placeholder="add task">
+            <button>add</button>
+      </div>
+      <div class="list-container">
+        <div class="list-info">
+            <input name="todo_check" type="checkbox" class="check" id="check">
+            <p class="p1">task1</p>
+        </div>
+        <div class="image">
+            <img class="img" src="../static/images/bin.png" alt="delete" width="20" height="40" onclick="delete_todo">
+            <img class="img" src="../static/images/pencil.png" alt="edit" width="20" height="40" onclick="update_todo">
+            <script>
+                function delete_todo(todo_id) {
+                    window.location="delete_todo/"+ todo_id
+                };
+                function update_todo(todo_id) {
+                    window.location="update_todo/"+ todo_id
+                }
+                const check = document.getElementById('check');
+                if (check.checked) {
+                console.log("Checkbox is checked.");
+                } else {
+                 console.log("Checkbox is not checked.");
+                }
+   
+                
+                
+            </script>
+        </div>
+        </div>
+ </div>
+</div>
 </body>
-
-
 </html>

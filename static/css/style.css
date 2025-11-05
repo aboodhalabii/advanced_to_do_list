@@ -1,0 +1,125 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: 'poppins',sans-serif;
+    box-sizing:border-box;
+}
+.container{
+    width: 100%;
+    min-height:100vh;
+    background:linear-gradient(120deg,#153677,#4e085f);
+    padding:10px;
+}
+.todo-app {
+    width: 60%;
+    background:#fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius:10px;
+    
+
+   
+   
+}
+.todo-app h2{
+     color:#002765;
+     display: flex;
+     align-items: center;
+   
+}
+.row{
+    display: flex;
+    background:#edeef0;
+    border-radius: 30px;
+    padding-left:20px;
+    margin-bottom: 25px;
+}
+ 
+input{
+    flex:1;
+    border:none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+}
+button{
+    border:none;
+    outline: none;
+    padding:16px 50px;
+    background:#ff5945;
+    color:#fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+ .list-container{
+    list-style: none;
+    font-size: 17px;
+    user-select: none;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    background: #ec3b0c;
+    border-radius: 37px;
+}
+.drop-list {
+    width: 100%;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: end;
+}
+ 
+.drop-list label {
+    font-weight: 600;
+    font-size: 14px;
+    color: #333;
+    margin: 16px;
+}
+ 
+ 
+.drop-list select {
+    padding: 8px 10px;
+    margin: 8px 20px 40px 20px;
+    font-size: 14px;
+    border: 1.5px solid #ccc;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.list-info{
+    margin: 9px;
+    padding:10px;
+    background-color:#ff5945;
+    width:100%;
+    border-radius:20px;
+    color: #edeef0;
+    display: flex;
+
+
+}
+.image{
+    display:flex;
+    justify-content:end;
+    width: 40%;
+}
+.check{
+margin-right:10px;
+max-width: 10px;
+}
+p1{
+    max-width:50px;
+}
+.img{
+     max-width: 40%;
+     margin: 10px;
+     
+}
+
+
+
+  
+
+
